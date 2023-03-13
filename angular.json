@@ -73,6 +73,14 @@
             "scripts": []
           },
           "configurations": {
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
             "production": {
               "budgets": [
                 {
@@ -102,6 +110,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "browserTarget": "shopping-cart:build:build-staging",
             "production": {
               "browserTarget": "shopping-cart:build:production"
             },
@@ -163,6 +172,16 @@
             "production": {
               "browserTarget": "shopping-cart:build:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "shopping-cart:build:production",
+            "firebaseProject": "shopping-cart-60698",
+            "firebaseHostingSite": "shopping-cart-60698"
           }
         }
       }
