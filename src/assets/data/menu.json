@@ -1,0 +1,13 @@
+
+[
+  {
+    "icon": "home",
+    "name": "Home",
+    "redirectTo": "/home"
+  },
+  {
+    "icon": "logo-google",
+    "name": "Auth",
+    "redirectTo": "/auth"
+  }
+]
