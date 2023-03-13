@@ -10,6 +10,11 @@ const routes: Routes = [
     component: TabsComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
         path: 'home',
         component: HomeComponent
       },
