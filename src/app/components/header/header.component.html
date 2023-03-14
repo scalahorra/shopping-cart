@@ -1,5 +1,20 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
+
     <ion-title>Home</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-icon slot="icon-only" color="primary" name="logo-google"
+        (click)="login()"
+        *ngIf="!loggedIn">
+      </ion-icon>
+
+      <img [src]="userInfo!.photoURL" *ngIf="loggedIn"
+        alt=" " class="profilePic" (click)="openProfile()"
+      >
+
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
