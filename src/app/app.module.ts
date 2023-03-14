@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { AuthComponent } from './pages/auth/auth.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -20,7 +19,6 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AuthComponent,
     TabsComponent
   ],
   imports: [
