@@ -1,13 +1,13 @@
 <ion-content class="ion-padding">
   <!-- <ion-button id="open-modal" expand="block">Open Modal</ion-button> -->
 
-  <ion-modal #profile isOpen="profileModal">
+  <ion-modal #profile [isOpen]="profileModal" backdropDismiss="false">
     <ng-template>
       <ion-content>
         <ion-toolbar>
-          <ion-title>Modal</ion-title>
+          <ion-title>{{userInfo!.name}}</ion-title>
           <ion-buttons slot="end">
-            <ion-icon size="large" color="light" name="close-outline" (click)="closeModal(profile)"></ion-icon>
+            <ion-icon size="large" color="light" name="close-outline" (click)="closeModal()"></ion-icon>
           </ion-buttons>
         </ion-toolbar>
         <ion-content class="ion-padding">

@@ -32,6 +32,7 @@ export class HeaderComponent {
           email: res.user.email,
           name: res.user.displayName,
         }
+        this.sharedService.updateUserInfo(this.userInfo);
       })
       .catch( error => {
         console.error(error);
