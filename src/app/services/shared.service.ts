@@ -8,7 +8,7 @@ import { UserInfo } from '../models/userInfo';
 export class SharedService {
 
   profileModalSubject = new Subject<boolean>();
-  profileModal: boolean = false;
+  profileModal: boolean = true;
   userInfoSubject = new Subject<UserInfo>
   userInfo?: UserInfo;
 

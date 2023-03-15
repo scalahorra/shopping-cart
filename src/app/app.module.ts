@@ -13,13 +13,15 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    TabsComponent
+    TabsComponent,
+    ProfileModalComponent
   ],
   imports: [
     BrowserModule,
