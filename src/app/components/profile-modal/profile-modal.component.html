@@ -1,29 +1,36 @@
 <ion-modal #profile [isOpen]="profileModal" backdropDismiss="false">
   <ng-template>
-      <ion-toolbar>
-        <ion-title>Usuario</ion-title>
-        <ion-buttons slot="end">
-          <ion-icon size="large" color="light" name="close-outline" (click)="closeModal()"></ion-icon>
-        </ion-buttons>
-      </ion-toolbar>
+      <ion-header class="ion-no-borders">
+        <ion-toolbar>
+          <ion-title>Usuario</ion-title>
+          <ion-buttons slot="end">
+            <ion-icon size="large" color="light" name="close-outline" (click)="closeModal()"></ion-icon>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
       <ion-content class="ion-padding userInfo">
         <ion-grid>
           <ion-row>
             <ion-col class="ion-text-center">
-              <img [src]="userInfo!.photoURL" alt=" ">
+              <img [src]="userInfo!.photoURL" alt=" " class="profilePhoto">
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              <p>{{userInfo!.name}}</p>
+              <ion-text class="loginItem">{{userInfo!.name}}</ion-text>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              <ion-text class="newFont">{{userInfo!.email}}</ion-text>
+              <ion-text class="loginItem">{{userInfo!.email}}</ion-text>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-content>
+
+      <ion-footer class="ion-no-borders ion-text-center">
+        <ion-button shape="round" color="danger"><ion-icon name="log-out-outline"></ion-icon></ion-button>
+      </ion-footer>
   </ng-template>
 </ion-modal>

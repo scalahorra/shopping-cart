@@ -9,9 +9,15 @@ ion-modal::part(backdrop) {
   opacity: 1;
 }
 ion-modal ion-toolbar {
-  --background: rgb(14 116 144);
+  --background: rgb(124, 158, 187);
   --color: white;
 }
-.userInfo {
-  display: flex!important;
+.profilePhoto {
+  width: 100px;
+  border-radius: 20px;
+  box-shadow: rgba(73, 131, 196, 0.3) 0px 0px 0px 3px;
+}
+.loginItem {
+  margin: 0;
+  font-weight: bold;
 }
