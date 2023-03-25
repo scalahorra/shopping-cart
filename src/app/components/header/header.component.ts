@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { UserInfo } from 'src/app/models/userInfo';
 
@@ -10,23 +10,28 @@ import { SharedService } from 'src/app/services/shared.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  loggedIn: boolean = false;
+  logged!: boolean;
   userInfo?: UserInfo;
 
   constructor(
     private auth: AuthService,
     private sharedService: SharedService
-  ) {
+  ) { }
 
+  ngOnInit(): void {
+    this.sharedService.getLogged().subscribe( value => {
+      this.logged = value;
+      console.log(value);
+    });
   }
 
-  login() {
+  login(): void {
     this.auth.loginWithGoogle()
       .then( res => {
         console.log(res)
-        this.loggedIn = true;
+        this.sharedService.updateLogged(true);
         this.userInfo = {
           photoURL: res.user.photoURL,
           email: res.user.email,
@@ -39,8 +44,8 @@ export class HeaderComponent {
       });
   }
 
-  openProfile() {
-    this.sharedService.updateProfile(true);
+  openProfile(): void {
+    this.sharedService.updateProfileModal(true);
   }
 
 }

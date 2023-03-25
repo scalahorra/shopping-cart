@@ -30,7 +30,9 @@
       </ion-content>
 
       <ion-footer class="ion-no-borders ion-text-center">
-        <ion-button shape="round" color="danger"><ion-icon name="log-out-outline"></ion-icon></ion-button>
+        <ion-button shape="round" color="danger" (click)="logout()">
+          <ion-icon name="log-out-outline"></ion-icon>
+        </ion-button>
       </ion-footer>
   </ng-template>
 </ion-modal>

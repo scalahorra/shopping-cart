@@ -7,10 +7,10 @@
 
       <ion-icon slot="icon-only" color="primary" name="logo-google"
         (click)="login()"
-        *ngIf="!loggedIn">
+        *ngIf="!logged">
       </ion-icon>
 
-      <img [src]="userInfo!.photoURL" *ngIf="loggedIn"
+      <img [src]="userInfo!.photoURL" *ngIf="logged"
         alt=" " class="profilePic" (click)="openProfile()"
       >
 
