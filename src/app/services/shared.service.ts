@@ -16,21 +16,21 @@ export class SharedService {
   getLogged(): Observable<boolean> {
     return this.logged.asObservable();
   }
-  updateLogged(value: boolean) {
+  updateLogged( value: boolean ) {
     this.logged.next(value);
   }
 
   getProfileModal(): Observable<boolean> {
     return this.profileModal.asObservable();
   }
-  updateProfileModal(value: boolean): void {
+  updateProfileModal( value: boolean ): void {
     this.profileModal.next(value);
   }
 
   getUserInfo(): Observable<UserInfo> {
     return this.userInfo.asObservable();
   }
-  updateUserInfo(value: UserInfo): void {
+  updateUserInfo( value: UserInfo ): void {
     this.userInfo.next(value);
   }
 

@@ -31,11 +31,11 @@ export class ProfileModalComponent implements OnInit {
     this.subscriptions.forEach( subscription => subscription.unsubscribe());
   }
 
-  closeModal() {
+  closeModal(): void {
     this.sharedService.updateProfileModal(false);
   }
 
-  logout() {
+  logout(): void {
     this.sharedService.updateLogged(false);
     this.closeModal();
   }
