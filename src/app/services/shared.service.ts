@@ -8,7 +8,7 @@ import { UserInfo } from '../models/userInfo';
 export class SharedService {
 
   private profileModal = new BehaviorSubject<boolean>(false);
-  private userInfo = new Subject<UserInfo>();
+  public userInfo = new Subject<UserInfo>();
   private logged = new BehaviorSubject<boolean>(false);
 
   constructor() { }

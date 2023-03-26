@@ -1,5 +1,27 @@
 <ion-content class="ion-padding">
 
+  <!-- <ion-button (click)="sendDataToBd()" color="primary">Enviar</ion-button>
 
+  <ion-button (click)="getDataFromBd()" color="warning">Recibir</ion-button> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="sendCollection()" color="primary" [disabled]="!userInfo">Crear colección</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="getCollection()" color="warning" [disabled]="!userInfo">Recibir colección</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="getUsers()" color="danger">Recibir usuarios</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

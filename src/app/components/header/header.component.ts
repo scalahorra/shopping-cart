@@ -30,7 +30,6 @@ export class HeaderComponent implements OnInit {
   login(): void {
     this.auth.loginWithGoogle()
       .then( res => {
-        console.log(res)
         this.sharedService.updateLogged(true);
         this.userInfo = {
           photoURL: res.user.photoURL,
