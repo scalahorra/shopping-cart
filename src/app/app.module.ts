@@ -14,6 +14,8 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
+import { FabButtonComponent } from './components/fab-button/fab-button.component';
+import { CreateListComponent } from './pages/create-list/create-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProfileModalComponent } from './components/profile-modal/profile-modal.
     HeaderComponent,
     HomeComponent,
     TabsComponent,
-    ProfileModalComponent
+    ProfileModalComponent,
+    FabButtonComponent,
+    CreateListComponent
   ],
   imports: [
     BrowserModule,
