@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -13,10 +14,10 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { TabsComponent } from './components/tabs/tabs.component';
 import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
 import { FabButtonComponent } from './components/fab-button/fab-button.component';
 import { CreateListComponent } from './pages/create-list/create-list.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
@@ -24,13 +25,14 @@ import { CreateListComponent } from './pages/create-list/create-list.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    TabsComponent,
     ProfileModalComponent,
     FabButtonComponent,
-    CreateListComponent
+    CreateListComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     IonicModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),

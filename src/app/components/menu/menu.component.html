@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="height: 100%">
+
+  <ion-list>
+    <ng-container *ngFor="let menuItem of menuItems">
+      <ion-item [routerLink]="menuItem.redirectTo">
+        <ion-label>{{menuItem.name | titlecase}}</ion-label>
+        <ion-icon [name]="menuItem.icon"></ion-icon>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
+</ion-content>

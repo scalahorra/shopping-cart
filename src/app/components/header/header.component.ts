@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 import { UserInfo } from 'src/app/models/userInfo';
 
@@ -17,7 +18,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private menuCtrl: MenuController
   ) { }
 
   ngOnInit(): void {
@@ -45,6 +47,10 @@ export class HeaderComponent implements OnInit {
 
   openProfile(): void {
     this.sharedService.updateProfileModal(true);
+  }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
   }
 
 }

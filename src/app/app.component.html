@@ -1,5 +1,9 @@
-<app-header></app-header>
+<!-- Menu lateral -->
+<ion-menu type="reveal" content-id="main-content">
+  <app-menu></app-menu>
+</ion-menu>
 
+<!-- Modal inicio sesion -->
 <app-profile-modal></app-profile-modal>
 
-<ion-router-outlet></ion-router-outlet>
+<ion-router-outlet id="main-content"></ion-router-outlet>
