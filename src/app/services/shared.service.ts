@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
+
 import { UserInfo } from '../models/userInfo';
+import { MenuItem } from '../models/menuItem';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +14,7 @@ export class SharedService {
   private userInfo = new Subject<UserInfo>();
   private logged = new BehaviorSubject<boolean>(false);
 
-  constructor() { }
+  constructor( private http: HttpClient ) { }
 
   getLogged(): Observable<boolean> {
     return this.logged.asObservable();
@@ -32,6 +35,10 @@ export class SharedService {
   }
   updateUserInfo( value: UserInfo ): void {
     this.userInfo.next(value);
+  }
+
+  getMenuOptions(): Observable<MenuItem[]> {
+    return this.http.get<MenuItem[]>('assets/data/menu.json');
   }
 
 }

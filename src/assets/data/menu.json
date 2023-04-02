@@ -1,13 +1,12 @@
-
 [
   {
-    "icon": "home",
-    "name": "Home",
+    "name": "home",
+    "icon": "home-outline",
     "redirectTo": "/home"
   },
   {
-    "icon": "logo-google",
-    "name": "Auth",
-    "redirectTo": "/auth"
+    "name": "create-list",
+    "icon": "cart-outline",
+    "redirectTo": "/create-list"
   }
 ]
